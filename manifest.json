@@ -1,11 +1,17 @@
 {
     "manifest_version": 3,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "addon@example.com",
+            "strict_min_version": "68.0"
+        }
+    },
     "default_locale": "en",
     "name": "__MSG_name__",
     "short_name": "__MSG_shortName__",
     "author": "__MSG_author__",
     "description": "__MSG_description__",
-    "version": "8.3.10",
+    "version": "8.3.12",
     "browser_action": {
         "default_icon": "img/icon128.png",
         "default_popup": "index.html",
@@ -28,8 +34,7 @@
     "background": {
         "scripts": [
             "src/background.js"
-        ],
-        "persistent": false
+        ]
     },
     "permissions": [
         "storage"

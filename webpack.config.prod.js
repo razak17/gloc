@@ -17,7 +17,7 @@ const JSconfig = {
   },
   devtool: 'inline-source-map',
   output: {
-    path: path.resolve(__dirname, 'dist/src/'),
+    path: path.resolve(__dirname, 'dist/src'),
     filename: '[name].js',
   },
   resolveLoader: {
