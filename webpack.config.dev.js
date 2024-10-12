@@ -31,8 +31,9 @@ const JSconfig = {
   module: {
     rules: [
       {
-        use: 'babel-loader',
         test: /\.js$/,
+        loader: 'babel',
+        query: {compact: false}
       },
       {
         test: /\.(ts|tsx)$/,
@@ -97,7 +98,7 @@ const OtherFilesConfig = {
   plugins: [
     new HtmlWebpackPlugin({
       template: __dirname + '/index.html',
-      filename: '/index.html',
+      filename: './index.html',
       inject: 'body',
       hash: true,
       minify: {
@@ -111,7 +112,7 @@ const OtherFilesConfig = {
     }),
     new HtmlWebpackPlugin({
       template: __dirname + '/options.html',
-      filename: '/options.html',
+      filename: './options.html',
       inject: 'body',
       hash: true,
       minify: {
